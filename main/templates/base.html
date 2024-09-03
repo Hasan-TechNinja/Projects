@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+{% load static tailwind_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+<body class='bg-gray-200'>
+    {% comment %} nav start {% endcomment %}
+     <nav class=''>
+        <div class='flex justify-between bg-white px-2'>
+            <ul class='flex justify-center items-center space-x-2'>
+                <li><img src="#" alt="logo"></li>
+                <li>Name</li>
+            </ul>
+            <ul class='flex justify-center items-center space-x-2 text-lg py-2  '>
+                <li><a href="{% url "home" %}">Home</a></li>
+                <li><a href="{% url "login" %}">Login</a></li>
+                <li><a href="{% url "logout" %}">Logout</a></li>
+                <li><a href="{% url "registration" %}">Registration</a></li>
+            </ul>
+            <ul class='flex justify-center items-center space-x-2'>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+     </nav>
+    {% comment %} nav end {% endcomment %}
+
+    {% block content %}{% endblock content %}
+
+    {% comment %} footer start {% endcomment %}
+    {% comment %} footer end {% endcomment %}
+</body>
+</html>
