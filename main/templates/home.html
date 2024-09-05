@@ -4,6 +4,132 @@
 
 {% block content %}
 
-    <h2>This is Home page</h2>
+<div class="lg:w-1/4">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden relative md:flex lg:flex md:w-6/12 lg:w-6/12">
+        <div class="bg-gray-800 text-white py-3 px-4 flex items-center justify-between cursor-pointer" id="toggle-departments">
+            <div class="flex items-center">
+                <i class="fa fa-bars mr-2"></i>
+                <span class="font-semibold">All departments</span>
+            </div>
+            <i class="fa fa-chevron-down" id="chevron-icon"></i>
+        </div>
+        <ul id="departments-list" class="divide-y divide-gray-200 hidden">
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Fresh Meat</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Vegetables</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Fruit & Nut Gifts</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Fresh Berries</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Ocean Foods</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Butter & Eggs</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Fastfood</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Fresh Onion</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Papayaya & Crisps</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Oatmeal</a>
+            </li>
+            <li class="hover:bg-gray-100">
+                <a href="#" class="block py-3 px-4 text-gray-700 hover:text-gray-900">Fresh Bananas</a>
+            </li>
+        </ul>
+
+        <div class="relative sm:w-6/12 md:6/12 lg:6/12 bg-cover bg-center my-3" style="background-image: url('{% static "image/Hasan.JPG" %}');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Dark overlay -->
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+                <span class="text-xl lg:text-2xl font-semibold tracking-widest uppercase text-green-300 mb-4">Fruit Fresh</span>
+                <h2 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                    Vegetable <br /> 
+                    <span class="text-green-400">100% Organic</span>
+                </h2>
+                <p class="text-lg lg:text-xl mb-8">Free Pickup and Delivery Available</p>
+                <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <section class="categories py-10">
+        <div class="container mx-auto">
+            <!-- Carousel Container -->
+            <div class="relative">
+                <!-- Carousel Slides -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Slide 1 -->
+                    <div class="categories__item relative bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('/path/to/image1.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <h5 class="text-white text-lg font-bold">
+                                <a href="#" class="hover:underline">Category 1</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="categories__item relative bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('/path/to/image2.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <h5 class="text-white text-lg font-bold">
+                                <a href="#" class="hover:underline">Category 2</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="categories__item relative bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('/path/to/image3.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <h5 class="text-white text-lg font-bold">
+                                <a href="#" class="hover:underline">Category 3</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="categories__item relative bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('/path/to/image4.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <h5 class="text-white text-lg font-bold">
+                                <a href="#" class="hover:underline">Category 4</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Status Indicator -->
+                <div class="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 py-4">
+                    <span class="bg-white w-3 h-3 rounded-full"></span>
+                    <span class="bg-gray-300 w-3 h-3 rounded-full"></span>
+                    <span class="bg-gray-300 w-3 h-3 rounded-full"></span>
+                    <span class="bg-gray-300 w-3 h-3 rounded-full"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</div>
+
+<script>
+    document.getElementById('toggle-departments').addEventListener('click', function() {
+        const list = document.getElementById('departments-list');
+        const icon = document.getElementById('chevron-icon');
+        list.classList.toggle('hidden');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+    });
+</script>
+
+    
     
 {% endblock content %}

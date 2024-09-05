@@ -21,7 +21,7 @@ def RegistrationView(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # Redirect to home after successful registration
+            return redirect('home')
     else:
         form = CustomUserCreationForm()
 
@@ -39,7 +39,7 @@ def LoginView(request):
             user = form.get_user()
             login(request, user)
             messages.success(request, f"Welcome back, {user.username}!")
-            return redirect('home')  # Redirect to the home page or wherever you want
+            return redirect('home')
         else:
             messages.error(request, "Invalid username or password.")
     else:
